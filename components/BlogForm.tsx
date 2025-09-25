@@ -7,7 +7,7 @@ import MDEditor from "@uiw/react-md-editor";
 import { Button } from "./ui/button";
 import { SendIcon } from "lucide-react";
 import { formSchema } from "@/lib/validation";
-import {z} from "zod";
+import { z } from "zod";
 import { useToast } from "@/hooks/use-toast";
 import { useRouter } from "next/navigation";
 import { createBlog } from "@/lib/actions";
@@ -39,7 +39,6 @@ const BlogForm = () => {
             });
             router.push(`/blog/${res._id}`);
         }
-        
 
     } catch (error) {
         if (error instanceof z.ZodError) {

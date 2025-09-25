@@ -6,7 +6,7 @@ export const formSchema = z.object({
     
     description: z.string().min(20).max(500).nonempty('Body is required'),
     
-    tag: z.array(z.string()).min(3).max(25).nonempty('Tags are required'),
+    tag: z.string().min(3).max(25).nonempty('Tag is required'),
     
     link: z.string().url().refine( async (url) => {
         try {
